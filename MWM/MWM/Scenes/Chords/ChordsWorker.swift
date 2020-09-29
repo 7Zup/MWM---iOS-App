@@ -10,12 +10,12 @@ import UIKit
 
 protocol ChordsWorkerLogic {
     
-    func getAllKeys(request: Chords.Main.Request, completionHandler: @escaping (AllKeysResponse?) -> Void, errorHandler: @escaping (Error?) -> Void)
+    func getAllKeys(request: Chords.AllKeys.Request, completionHandler: @escaping (AllKeysResponse?) -> Void, errorHandler: @escaping (Error?) -> Void)
 }
 
 class ChordsWorker: ChordsWorkerLogic {
     
-    func getAllKeys(request: Chords.Main.Request, completionHandler: @escaping (AllKeysResponse?) -> Void, errorHandler: @escaping (Error?) -> Void) {
+    func getAllKeys(request: Chords.AllKeys.Request, completionHandler: @escaping (AllKeysResponse?) -> Void, errorHandler: @escaping (Error?) -> Void) {
         
         APIManager.shared.request(urlString: "midi-chords", httpMethodType: "GET", urlParams: request.urlParams, completionHandler: completionHandler, errorHandler: errorHandler)
     }

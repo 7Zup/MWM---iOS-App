@@ -10,16 +10,14 @@ import UIKit
 
 protocol ChordsBusinessLogic {
 
-    func getKeyList()
-    func updateSelectedKey(with index: IndexPath)
-    func updateSelectedChord(with index: IndexPath)
+    func viewDidLoad()
+    func selectKey(with index: IndexPath)
+    func selectChord(with index: IndexPath)
 }
 
 protocol ChordsData {
     
     var allKeys: AllKeysResponse? { get set }
-    var selectedKey: String? { get set }
-    var selectedChord: String? { get set }
 }
 
 class ChordsInteractor: ChordsBusinessLogic, ChordsData {
@@ -28,41 +26,69 @@ class ChordsInteractor: ChordsBusinessLogic, ChordsData {
     var worker: ChordsWorker?
     
     var allKeys: AllKeysResponse?
-    var selectedKey: String?
-    var selectedChord: String?
-
-    // MARK: - Update values
+    var keySelectedIndex: Int = 0
+    var chordSelectedIndex: Int = 0
     
-    func updateSelectedKey(with index: IndexPath) {
-        
-        //self.selectedKey = index
-        // TODO: - Update label
+    func selectKey(with index: IndexPath) {
+        if index.row != keySelectedIndex {
+            keySelectedIndex = index.row
+            chordSelectedIndex = 0
+            refreshAllKeys()
+            setTitleLabel()
+        }
     }
     
-    func updateSelectedChord(with index: IndexPath) {
+    func selectChord(with index: IndexPath) {
+        if index.row != chordSelectedIndex {
+            chordSelectedIndex = index.row
+            setTitleLabel()
+        }
+    }
+    
+    func viewDidLoad() {
+        getKeyList()
+        setTitleLabel()
+    }
+    
+    private func setTitleLabel() {
+        let title: String
         
-        //self.selectedChord = index
-        // TODO: - Update chordList
-        // TODO: - Update label
+        if let keyString: String = allKeys?.allKeys?[keySelectedIndex].name,
+            let chordString: String = allKeys?.allChords?[chordSelectedIndex].suffix {
+            title = "\(keyString) \(chordString)"
+        } else {
+            title = "Chords"
+        }
+        presenter?.presentChordsLabel(response: Chords.Main.Response(titleLabel: title))
     }
     
     // MARK: - Get All Keys
     
-    func getKeyList() {
+    private func getKeyList() {
         
         let urlParams = [String: String]()
-        self.worker?.getAllKeys(request: Chords.Main.Request(urlParams: urlParams), completionHandler: allKeyCompletionHandler, errorHandler: allKeyErrorHandler)
+        self.worker?.getAllKeys(request: Chords.AllKeys.Request(urlParams: urlParams),
+                                completionHandler: allKeysCompletionHandler,
+                                errorHandler: allKeysErrorHandler)
     }
     
-    func allKeyCompletionHandler(response: AllKeysResponse?) {
+    func allKeysCompletionHandler(response: AllKeysResponse?) {
 
         if let allKeys: AllKeysResponse = response {
             self.allKeys = allKeys
-            // CALL PRESENTER & Update collection views
+            refreshAllKeys()
+            setTitleLabel()
         }
     }
     
-    func allKeyErrorHandler(error: Error?) {
+    private func refreshAllKeys() {
+        let response: Chords.AllKeys.Response = Chords.AllKeys.Response(allKeysResponse: allKeys,
+                                                                        selectedKey: keySelectedIndex,
+                                                                        selectedChord: chordSelectedIndex)
+        presenter?.presentAllKeys(response: response)
+    }
+    
+    func allKeysErrorHandler(error: Error?) {
         
         if let error: Error = error {
             print("Error in allKeyErrorHandler: ", error)

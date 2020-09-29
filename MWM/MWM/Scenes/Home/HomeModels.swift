@@ -18,6 +18,7 @@ enum Home {
         }
         
         struct Response {
+            
             var navBarTitle: String
         }
         

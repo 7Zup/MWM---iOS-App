@@ -12,6 +12,18 @@ enum Chords {
     
     enum Main {
         
+        struct Response {
+            var titleLabel: String
+        }
+        
+        struct ViewModel {
+            
+            var titleLabel: String
+        }
+    }
+    
+    enum AllKeys {
+        
         struct Request {
             
             var urlParams: [String: String]
@@ -19,12 +31,15 @@ enum Chords {
         
         struct Response {
             
-            var allKeysResponse: AllKeysResponse
+            var allKeysResponse: AllKeysResponse?
+            var selectedKey: Int
+            var selectedChord: Int
         }
         
         struct ViewModel {
             
-            var titleLabel: String
+            var keys: [String]
+            var chords: [String]
         }
     }
 }

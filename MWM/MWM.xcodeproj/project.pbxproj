@@ -26,6 +26,9 @@
 		E7889A3125238245001D66DA /* ChordsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2B25238244001D66DA /* ChordsWorker.swift */; };
 		E7889A3225238245001D66DA /* ChordsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2C25238244001D66DA /* ChordsPresenter.swift */; };
 		E7889A3325238245001D66DA /* ChordsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2D25238244001D66DA /* ChordsRouter.swift */; };
+		E7889A392523B63A001D66DA /* ChordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A382523B63A001D66DA /* ChordsCollectionViewCell.swift */; };
+		E7889A3B2523B692001D66DA /* ChordsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7889A3A2523B692001D66DA /* ChordsCollectionViewCell.xib */; };
+		E7889A3D2523E5E3001D66DA /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A3C2523E5E3001D66DA /* Extension+ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		E7889A2B25238244001D66DA /* ChordsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsWorker.swift; sourceTree = "<group>"; };
 		E7889A2C25238244001D66DA /* ChordsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsPresenter.swift; sourceTree = "<group>"; };
 		E7889A2D25238244001D66DA /* ChordsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsRouter.swift; sourceTree = "<group>"; };
+		E7889A382523B63A001D66DA /* ChordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7889A3A2523B692001D66DA /* ChordsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChordsCollectionViewCell.xib; sourceTree = "<group>"; };
+		E7889A3C2523E5E3001D66DA /* Extension+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		E7889A0E252366CB001D66DA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E7889A3C2523E5E3001D66DA /* Extension+ViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -173,14 +180,24 @@
 		E7889A2725238244001D66DA /* Chords */ = {
 			isa = PBXGroup;
 			children = (
+				E7889A372523B5C6001D66DA /* CollectionViewCell */,
 				E7889A2825238244001D66DA /* ChordsViewController.swift */,
-				E7889A2925238244001D66DA /* ChordsModels.swift */,
 				E7889A2A25238244001D66DA /* ChordsInteractor.swift */,
-				E7889A2B25238244001D66DA /* ChordsWorker.swift */,
 				E7889A2C25238244001D66DA /* ChordsPresenter.swift */,
+				E7889A2B25238244001D66DA /* ChordsWorker.swift */,
+				E7889A2925238244001D66DA /* ChordsModels.swift */,
 				E7889A2D25238244001D66DA /* ChordsRouter.swift */,
 			);
 			path = Chords;
+			sourceTree = "<group>";
+		};
+		E7889A372523B5C6001D66DA /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7889A382523B63A001D66DA /* ChordsCollectionViewCell.swift */,
+				E7889A3A2523B692001D66DA /* ChordsCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +262,7 @@
 				E7889A022523657E001D66DA /* LaunchScreen.storyboard in Resources */,
 				E78899FF2523657E001D66DA /* Assets.xcassets in Resources */,
 				E78899FA2523657C001D66DA /* Main.storyboard in Resources */,
+				E7889A3B2523B692001D66DA /* ChordsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +297,7 @@
 				E7889A2F25238244001D66DA /* ChordsModels.swift in Sources */,
 				E7889A1625236BC8001D66DA /* APIManager.swift in Sources */,
 				E7889A2425237407001D66DA /* HomeModels.swift in Sources */,
+				E7889A392523B63A001D66DA /* ChordsCollectionViewCell.swift in Sources */,
 				E7889A3225238245001D66DA /* ChordsPresenter.swift in Sources */,
 				E7889A3125238245001D66DA /* ChordsWorker.swift in Sources */,
 				E7889A2525237407001D66DA /* HomePresenter.swift in Sources */,
@@ -289,6 +308,7 @@
 				E7889A2025237407001D66DA /* HomeInteractor.swift in Sources */,
 				E78899F52523657C001D66DA /* AppDelegate.swift in Sources */,
 				E7889A2325237407001D66DA /* HomeWorker.swift in Sources */,
+				E7889A3D2523E5E3001D66DA /* Extension+ViewController.swift in Sources */,
 				E7889A2125237407001D66DA /* HomeViewController.swift in Sources */,
 				E7889A3025238244001D66DA /* ChordsInteractor.swift in Sources */,
 			);
