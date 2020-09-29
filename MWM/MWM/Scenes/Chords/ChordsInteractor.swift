@@ -57,7 +57,7 @@ class ChordsInteractor: ChordsBusinessLogic, ChordsData {
             let chordString: String = allKeys?.allChords?[chordSelectedIndex].suffix {
             title = "\(keyString) \(chordString)"
         } else {
-            title = "Chords"
+            title = ""
         }
         presenter?.presentChordsLabel(response: Chords.Main.Response(titleLabel: title))
     }
