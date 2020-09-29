@@ -80,15 +80,63 @@
 		E78899F32523657C001D66DA /* MWM */ = {
 			isa = PBXGroup;
 			children = (
-				E78899F42523657C001D66DA /* AppDelegate.swift */,
+				E7889A0E252366CB001D66DA /* Utils */,
+				E7889A09252366A4001D66DA /* API */,
+				E7889A0A252366AB001D66DA /* Models */,
+				E7889A0B252366AF001D66DA /* Views */,
+				E7889A0C252366B3001D66DA /* Scenes */,
+				E7889A0D252366C0001D66DA /* Settings */,
 				E78899F62523657C001D66DA /* ViewController.swift */,
-				E78899F82523657C001D66DA /* Main.storyboard */,
-				E78899FE2523657E001D66DA /* Assets.xcassets */,
-				E7889A002523657E001D66DA /* LaunchScreen.storyboard */,
-				E7889A032523657E001D66DA /* Info.plist */,
-				E78899FB2523657C001D66DA /* MWM.xcdatamodeld */,
 			);
 			path = MWM;
+			sourceTree = "<group>";
+		};
+		E7889A09252366A4001D66DA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E7889A0A252366AB001D66DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E78899FB2523657C001D66DA /* MWM.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7889A0B252366AF001D66DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E78899F82523657C001D66DA /* Main.storyboard */,
+				E7889A002523657E001D66DA /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7889A0C252366B3001D66DA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E7889A0D252366C0001D66DA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E78899F42523657C001D66DA /* AppDelegate.swift */,
+				E78899FE2523657E001D66DA /* Assets.xcassets */,
+				E7889A032523657E001D66DA /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E7889A0E252366CB001D66DA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
