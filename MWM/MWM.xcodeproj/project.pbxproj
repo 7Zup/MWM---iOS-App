@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		26902F4EED300A1718A7629F /* Pods_MWM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5FC1C6D28AE4B0DC6A38EC /* Pods_MWM.framework */; };
 		E78899F52523657C001D66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78899F42523657C001D66DA /* AppDelegate.swift */; };
-		E78899F72523657C001D66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78899F62523657C001D66DA /* ViewController.swift */; };
 		E78899FA2523657C001D66DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78899F82523657C001D66DA /* Main.storyboard */; };
-		E78899FD2523657C001D66DA /* MWM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E78899FB2523657C001D66DA /* MWM.xcdatamodeld */; };
 		E78899FF2523657E001D66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78899FE2523657E001D66DA /* Assets.xcassets */; };
 		E7889A022523657E001D66DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7889A002523657E001D66DA /* LaunchScreen.storyboard */; };
+		E7889A1625236BC8001D66DA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1525236BC7001D66DA /* APIManager.swift */; };
+		E7889A1825236CA5001D66DA /* AllKeysResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1725236CA5001D66DA /* AllKeysResponseModel.swift */; };
+		E7889A2025237407001D66DA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1A25237406001D66DA /* HomeInteractor.swift */; };
+		E7889A2125237407001D66DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1B25237406001D66DA /* HomeViewController.swift */; };
+		E7889A2225237407001D66DA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1C25237406001D66DA /* HomeRouter.swift */; };
+		E7889A2325237407001D66DA /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1D25237406001D66DA /* HomeWorker.swift */; };
+		E7889A2425237407001D66DA /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1E25237406001D66DA /* HomeModels.swift */; };
+		E7889A2525237407001D66DA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A1F25237406001D66DA /* HomePresenter.swift */; };
+		E7889A2E25238244001D66DA /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2825238244001D66DA /* ChordsViewController.swift */; };
+		E7889A2F25238244001D66DA /* ChordsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2925238244001D66DA /* ChordsModels.swift */; };
+		E7889A3025238244001D66DA /* ChordsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2A25238244001D66DA /* ChordsInteractor.swift */; };
+		E7889A3125238245001D66DA /* ChordsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2B25238244001D66DA /* ChordsWorker.swift */; };
+		E7889A3225238245001D66DA /* ChordsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2C25238244001D66DA /* ChordsPresenter.swift */; };
+		E7889A3325238245001D66DA /* ChordsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A2D25238244001D66DA /* ChordsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +34,24 @@
 		76B27C76DE5607B9CBF9A71A /* Pods-MWM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MWM/Pods-MWM.debug.xcconfig"; sourceTree = "<group>"; };
 		E78899F12523657C001D66DA /* MWM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78899F42523657C001D66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E78899F62523657C001D66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E78899F92523657C001D66DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E78899FC2523657C001D66DA /* MWM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MWM.xcdatamodel; sourceTree = "<group>"; };
 		E78899FE2523657E001D66DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7889A012523657E001D66DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7889A032523657E001D66DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7889A1525236BC7001D66DA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = MWM/Settings/APIManager.swift; sourceTree = SOURCE_ROOT; };
+		E7889A1725236CA5001D66DA /* AllKeysResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllKeysResponseModel.swift; sourceTree = "<group>"; };
+		E7889A1A25237406001D66DA /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E7889A1B25237406001D66DA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E7889A1C25237406001D66DA /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E7889A1D25237406001D66DA /* HomeWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		E7889A1E25237406001D66DA /* HomeModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		E7889A1F25237406001D66DA /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E7889A2825238244001D66DA /* ChordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		E7889A2925238244001D66DA /* ChordsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsModels.swift; sourceTree = "<group>"; };
+		E7889A2A25238244001D66DA /* ChordsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsInteractor.swift; sourceTree = "<group>"; };
+		E7889A2B25238244001D66DA /* ChordsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsWorker.swift; sourceTree = "<group>"; };
+		E7889A2C25238244001D66DA /* ChordsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsPresenter.swift; sourceTree = "<group>"; };
+		E7889A2D25238244001D66DA /* ChordsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +109,9 @@
 				E7889A0A252366AB001D66DA /* Models */,
 				E7889A0B252366AF001D66DA /* Views */,
 				E7889A0C252366B3001D66DA /* Scenes */,
-				E7889A0D252366C0001D66DA /* Settings */,
-				E78899F62523657C001D66DA /* ViewController.swift */,
+				E78899F42523657C001D66DA /* AppDelegate.swift */,
+				E7889A032523657E001D66DA /* Info.plist */,
+				E78899FE2523657E001D66DA /* Assets.xcassets */,
 			);
 			path = MWM;
 			sourceTree = "<group>";
@@ -94,6 +119,7 @@
 		E7889A09252366A4001D66DA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E7889A1525236BC7001D66DA /* APIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -101,7 +127,7 @@
 		E7889A0A252366AB001D66DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E78899FB2523657C001D66DA /* MWM.xcdatamodeld */,
+				E7889A1725236CA5001D66DA /* AllKeysResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,18 +144,10 @@
 		E7889A0C252366B3001D66DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E7889A2725238244001D66DA /* Chords */,
+				E7889A1925237406001D66DA /* Home */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		E7889A0D252366C0001D66DA /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				E78899F42523657C001D66DA /* AppDelegate.swift */,
-				E78899FE2523657E001D66DA /* Assets.xcassets */,
-				E7889A032523657E001D66DA /* Info.plist */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		E7889A0E252366CB001D66DA /* Utils */ = {
@@ -137,6 +155,32 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E7889A1925237406001D66DA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E7889A1B25237406001D66DA /* HomeViewController.swift */,
+				E7889A1A25237406001D66DA /* HomeInteractor.swift */,
+				E7889A1F25237406001D66DA /* HomePresenter.swift */,
+				E7889A1D25237406001D66DA /* HomeWorker.swift */,
+				E7889A1E25237406001D66DA /* HomeModels.swift */,
+				E7889A1C25237406001D66DA /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E7889A2725238244001D66DA /* Chords */ = {
+			isa = PBXGroup;
+			children = (
+				E7889A2825238244001D66DA /* ChordsViewController.swift */,
+				E7889A2925238244001D66DA /* ChordsModels.swift */,
+				E7889A2A25238244001D66DA /* ChordsInteractor.swift */,
+				E7889A2B25238244001D66DA /* ChordsWorker.swift */,
+				E7889A2C25238244001D66DA /* ChordsPresenter.swift */,
+				E7889A2D25238244001D66DA /* ChordsRouter.swift */,
+			);
+			path = Chords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +276,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E78899F72523657C001D66DA /* ViewController.swift in Sources */,
-				E78899FD2523657C001D66DA /* MWM.xcdatamodeld in Sources */,
+				E7889A2F25238244001D66DA /* ChordsModels.swift in Sources */,
+				E7889A1625236BC8001D66DA /* APIManager.swift in Sources */,
+				E7889A2425237407001D66DA /* HomeModels.swift in Sources */,
+				E7889A3225238245001D66DA /* ChordsPresenter.swift in Sources */,
+				E7889A3125238245001D66DA /* ChordsWorker.swift in Sources */,
+				E7889A2525237407001D66DA /* HomePresenter.swift in Sources */,
+				E7889A2E25238244001D66DA /* ChordsViewController.swift in Sources */,
+				E7889A2225237407001D66DA /* HomeRouter.swift in Sources */,
+				E7889A3325238245001D66DA /* ChordsRouter.swift in Sources */,
+				E7889A1825236CA5001D66DA /* AllKeysResponseModel.swift in Sources */,
+				E7889A2025237407001D66DA /* HomeInteractor.swift in Sources */,
 				E78899F52523657C001D66DA /* AppDelegate.swift in Sources */,
+				E7889A2325237407001D66DA /* HomeWorker.swift in Sources */,
+				E7889A2125237407001D66DA /* HomeViewController.swift in Sources */,
+				E7889A3025238244001D66DA /* ChordsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,19 +492,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E78899FB2523657C001D66DA /* MWM.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E78899FC2523657C001D66DA /* MWM.xcdatamodel */,
-			);
-			currentVersion = E78899FC2523657C001D66DA /* MWM.xcdatamodel */;
-			path = MWM.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E78899E92523657C001D66DA /* Project object */;
 }
