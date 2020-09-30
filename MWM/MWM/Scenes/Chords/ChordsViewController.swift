@@ -109,7 +109,9 @@ class ChordsViewController: UIViewController, ChordsDisplayLogic {
         DispatchQueue.main.async {
             self.keysCollectionView.reloadData() // not sure
             self.chordsCollectionView.reloadData() // not sure
-            self.chordsCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+            if self.allKeysViewModel?.chords.count ?? 0 > 0 {
+                self.chordsCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+            }
             self.dismissSimpleLoadingView()
         }
     }

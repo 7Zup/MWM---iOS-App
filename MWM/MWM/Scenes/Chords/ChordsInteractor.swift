@@ -95,5 +95,10 @@ class ChordsInteractor: ChordsBusinessLogic, ChordsData {
         } else {
             print("Error - ChordsInteractor - allKeyErrorHandler - Could not fetch data")
         }
+        let response: Chords.AllKeys.Response = Chords.AllKeys.Response(allKeysResponse: nil,
+                                                                        selectedKey: 0,
+                                                                        selectedChord: 0)
+        presenter?.presentAllKeys(response: response)
+        presenter?.presentChordsLabel(response: Chords.Main.Response(titleLabel: "☁️ Network Error ☁️\nReally sorry about that 🤒\nCheck your internet connection and try again !"))
     }
 }
