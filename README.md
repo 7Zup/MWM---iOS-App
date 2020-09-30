@@ -1,10 +1,13 @@
 MWM - Test App
 ================================
-This app is... --- PURPOSE ---
+The purpose of this project was to replicate a music one view application in order to show my skill in iOS Swift for the MWM company. The app had one API call and one tabBar with 4 items on it (but only one was supposed to be developped). The tabBar item called "Chords" displayed a view with two collection view (or carousel) that the user could interact with in order to change a label.
 
-I had 3 hours to develop and submit this app, that is going to be reviewed for my application at MWM company.
+The rules:
+- 3 hours to develop and submit the app
+- no external libraries
+- if the project isnt finished on time, it is appreciated to finish it afterwards and send a second version of it
 
-The target of this app is iOS 9.0 and above, and it is made for iPhones only.
+The target of this app is iOS 12.0 and above, and it is made for iPhones & iPad on portrait.
 
 * [ScreenShots](#markdown-header-block-screenshots)
 * [Architecture](#markdown-header-architecture)
@@ -15,9 +18,17 @@ The target of this app is iOS 9.0 and above, and it is made for iPhones only.
 
 Here you will find screenshots of the application:
 
-![Alt text](https://i.ibb.co/X5FkJqJ/Screenshot-2020-09-08-at-22-34-50.png)
+![Alt text](https://i.ibb.co/72NmRHM/Chords.png)
 
-	Home View - This is where you arrived after launching the app
+	Chords View - This is where you arrived after launching the app - Up are Keys, Down are Chords
+
+![Alt text](https://i.ibb.co/t8snQCv/Work-in-progress.png)
+
+	Other Views - The three other tab bar look like this since it was due
+
+![Alt text](https://i.ibb.co/LN7DHpM/Network-Error.png)
+
+	Network Error - In case the API call doesn't work
 
 # Architecture
 
@@ -25,28 +36,22 @@ This project follows the Clean Swift architecture where all the components (View
 
 This app has been developped in Swift5 and I have been using git flow to push each feature.
 
-For the UI, I've been using the auto-layout system, making it adaptable for all iPhone sizes.
-
-The application is fully translated in French & in English with the localizable Xcode system.
+For the UI, I've been using the auto-layout system, making it adaptable for all iPhone/iPad sizes.
 
 # Librairies
 
-I used few librairies to help me with colors (lib: Colours) & with alertviews (lib: FCAlertView).
-
-I also used one to fill up the models after an API calls that works like Codable in swift (lib: Mantle), even there are no API calls within the app.
+No librairies have been used do to the rules of the test.
 
 # In the future
 
 Since this is a demo project, it can sure be improved in many ways.
 
-We can improve the application by:
+I could improve the application by:
 
-- ..
-- ..
-- ..
+- making the collectionViews to grow/strink and change opacity while scrolling
+- localize the app
 
-But we can also improve the code by:
+But I could also improve the code by:
 
 - adding swiftGen to securise the use of localizables, colors & fonts
 - adding conventions for the code like swiftlint for swift
-- etc..
