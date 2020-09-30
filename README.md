@@ -13,6 +13,7 @@ The target of this app is iOS 12.0 and above, and it is made for iPhones & iPad 
 * [Architecture](#markdown-header-architecture)
 * [Librairies](#markdown-header-librairies)
 * [In the future](#markdown-header-in-the-future)
+* [Download and Install](#markdown-header-download-and-install)
 
 # ScreenShots
 
@@ -55,3 +56,9 @@ But I could also improve the code by:
 
 - adding swiftGen to securise the use of localizables, colors & fonts
 - adding conventions for the code like swiftlint for swift
+
+# Download and Install
+
+To download the project, use either "git clone" or download in .zip file.
+
+Once downloaded, you'll have to run "pod install" command within the project. This has been made because, even though there is no librairy yet, it doesn't mean there will never be in the future.
