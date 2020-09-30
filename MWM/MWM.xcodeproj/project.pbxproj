@@ -29,6 +29,7 @@
 		E7889A392523B63A001D66DA /* ChordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A382523B63A001D66DA /* ChordsCollectionViewCell.swift */; };
 		E7889A3B2523B692001D66DA /* ChordsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7889A3A2523B692001D66DA /* ChordsCollectionViewCell.xib */; };
 		E7889A3D2523E5E3001D66DA /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7889A3C2523E5E3001D66DA /* Extension+ViewController.swift */; };
+		E790B249252400B600B60A38 /* WIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E790B243252400B600B60A38 /* WIPViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		E7889A382523B63A001D66DA /* ChordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7889A3A2523B692001D66DA /* ChordsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChordsCollectionViewCell.xib; sourceTree = "<group>"; };
 		E7889A3C2523E5E3001D66DA /* Extension+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
+		E790B243252400B600B60A38 /* WIPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WIPViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		E7889A0C252366B3001D66DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E790B241252400B600B60A38 /* Work in Progess */,
 				E7889A2725238244001D66DA /* Chords */,
 				E7889A1925237406001D66DA /* Home */,
 			);
@@ -198,6 +201,14 @@
 				E7889A3A2523B692001D66DA /* ChordsCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E790B241252400B600B60A38 /* Work in Progess */ = {
+			isa = PBXGroup;
+			children = (
+				E790B243252400B600B60A38 /* WIPViewController.swift */,
+			);
+			path = "Work in Progess";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			files = (
 				E7889A2F25238244001D66DA /* ChordsModels.swift in Sources */,
 				E7889A1625236BC8001D66DA /* APIManager.swift in Sources */,
+				E790B249252400B600B60A38 /* WIPViewController.swift in Sources */,
 				E7889A2425237407001D66DA /* HomeModels.swift in Sources */,
 				E7889A392523B63A001D66DA /* ChordsCollectionViewCell.swift in Sources */,
 				E7889A3225238245001D66DA /* ChordsPresenter.swift in Sources */,

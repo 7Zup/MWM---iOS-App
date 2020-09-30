@@ -53,6 +53,10 @@ class ChordsViewController: UIViewController, ChordsDisplayLogic {
     
     // MARK: - View lifecycle
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

@@ -41,7 +41,10 @@
                             <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-u9-Qaf">
                                 <rect key="frame" x="0.0" y="779" width="414" height="83"/>
                                 <items>
+                                    <tabBarItem title="Tuner" image="tuner" id="KyV-Ci-LE1"/>
+                                    <tabBarItem title="Chromatic" image="chromatic" id="J3a-ZX-9yj"/>
                                     <tabBarItem title="Chords" image="chords" id="1aX-cV-gkN"/>
+                                    <tabBarItem title="Metronome" image="metronome" id="yuD-7X-MI4"/>
                                 </items>
                                 <color key="barTintColor" red="0.078431372549019607" green="0.086274509803921567" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="selectedImageTintColor" red="0.023529411760000001" green="0.58823529409999997" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,8 +184,50 @@
             </objects>
             <point key="canvasLocation" x="1032" y="21"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="37K-uL-8wR">
+            <objects>
+                <viewController storyboardIdentifier="WIPViewController" id="7Ct-Xs-E0e" customClass="WIPViewController" customModule="MWM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LNZ-Oo-JbX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-AG-YcV">
+                                <rect key="frame" x="34.5" y="304.5" width="345" height="297"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WorkInProgress" translatesAutoresizingMaskIntoConstraints="NO" id="s9L-Xi-1bT">
+                                        <rect key="frame" x="82.5" y="0.0" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="s9L-Xi-1bT" secondAttribute="height" id="DQu-rt-1hk"/>
+                                            <constraint firstAttribute="width" constant="180" id="noo-aZ-80P"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in progress Sorry for the inconvinient" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3O-Bh-PYZ">
+                                        <rect key="frame" x="0.0" y="230" width="345" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Sud-AG-YcV" firstAttribute="centerX" secondItem="3gz-lj-CJo" secondAttribute="centerX" id="Lb0-Vc-vuu"/>
+                            <constraint firstItem="Sud-AG-YcV" firstAttribute="centerY" secondItem="3gz-lj-CJo" secondAttribute="centerY" id="ycU-7j-Cjs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3gz-lj-CJo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xE-Pf-PBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="21"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="chords" width="64" height="64"/>
+        <image name="WorkInProgress" width="100" height="100"/>
+        <image name="chords" width="25" height="25"/>
+        <image name="chromatic" width="25" height="25"/>
+        <image name="metronome" width="25" height="25"/>
+        <image name="tuner" width="25" height="25"/>
     </resources>
 </document>

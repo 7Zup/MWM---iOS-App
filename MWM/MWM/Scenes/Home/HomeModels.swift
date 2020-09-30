@@ -27,4 +27,5 @@ enum Home {
             var navBarTitle: String
         }
     }
+    
 }

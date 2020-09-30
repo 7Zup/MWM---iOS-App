@@ -11,6 +11,10 @@ import UIKit
 protocol HomeDisplayLogic: class {
     
     func displayChordsView(viewModel: Home.Main.ViewModel)
+    func displayChromaticView(viewModel: Home.Main.ViewModel)
+    func displayTunerView(viewModel: Home.Main.ViewModel)
+    func displayMetronomeView(viewModel: Home.Main.ViewModel)
+    func initTabBar(index: Int)
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -81,15 +85,47 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     
     private func initContent() {
-        tabBar.selectedItem = tabBar.items?.first
-        interactor?.selectTab(tab: 0)
+        
+        // Init tab bar
+        tabBar.delegate = self
+        interactor?.initTabBar(tabBar: tabBar)
     }
     
     // MARK: - Presenter protocol
     
+    func initTabBar(index: Int) {
+
+        tabBar.selectedItem = tabBar.items?[index]
+        interactor?.selectTab(tab: index)
+    }
+    
     func displayChordsView(viewModel: Home.Main.ViewModel) {
         self.title = viewModel.navBarTitle
         router?.routeToChords(containerView: self.containerView)
+    }
+    
+    func displayChromaticView(viewModel: Home.Main.ViewModel) {
+        self.title = viewModel.navBarTitle
+        router?.routeToWIP(containerView: self.containerView)
+    }
+    
+    func displayTunerView(viewModel: Home.Main.ViewModel) {
+        self.title = viewModel.navBarTitle
+        router?.routeToWIP(containerView: self.containerView)
+    }
+    
+    func displayMetronomeView(viewModel: Home.Main.ViewModel) {
+        self.title = viewModel.navBarTitle
+        router?.routeToWIP(containerView: self.containerView)
+    }
+    
+}
+
+extension HomeViewController: UITabBarDelegate {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        containerView.subviews.last?.removeFromSuperview()
+        interactor?.selectTab(tab: (tabBar.items?.firstIndex(of: item)) ?? 0)
     }
     
 }
